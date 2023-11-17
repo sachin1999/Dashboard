@@ -1,8 +1,8 @@
-const BASE_URL = 'http://localhost:4000'
+const BASE_URL = import.meta.env.VITE_API_BASE_URL
 
 const countryResponse = await fetch(`${BASE_URL}/country`);
 export const fetchedCountries = await countryResponse.json();
-//console.log(fetchedCountries);
+// console.log(fetchedCountries);
 
 const sectorResponse = await fetch(`${BASE_URL}/sectors`);
 export const fetchedSectors = await sectorResponse.json();
