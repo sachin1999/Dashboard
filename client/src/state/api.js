@@ -1,29 +1,30 @@
-const BASE_URL = 'http://localhost:4000'
+import axios from "axios";
+axios.defaults.baseURL= import.meta.env.VITE_API_BASE_URL;
 
-const countryResponse = await fetch(`${BASE_URL}/country`);
-export const fetchedCountries = await countryResponse.json();
-//console.log(fetchedCountries);
+const countryResponse = await axios.get(`/country`);
+export const fetchedCountries = await countryResponse.data;
+console.log(fetchedCountries);
 
-const sectorResponse = await fetch(`${BASE_URL}/sectors`);
-export const fetchedSectors = await sectorResponse.json();
+const sectorResponse = await axios.get(`/sectors`);
+export const fetchedSectors = await sectorResponse.data;
 //console.log(fetchedSectors);
 
-const topicResponse = await fetch(`${BASE_URL}/topics`);
-export const fetchedTopics = await topicResponse.json();
+const topicResponse = await axios.get(`/topics`);
+export const fetchedTopics = await topicResponse.data;
 //console.log(fetchedTopics);
 
-const intensityResponse = await fetch(`${BASE_URL}/intensity`);
-export const fetchedIntensity = await intensityResponse.json();
+const intensityResponse = await axios.get(`/intensity`);
+export const fetchedIntensity = await intensityResponse.data;
 //console.log(fetchedIntensity);
 
-const relevanceResponse = await fetch(`${BASE_URL}/relevance`);
-export const fetchedRelevance = await relevanceResponse.json();
+const relevanceResponse = await axios.get(`/relevance`);
+export const fetchedRelevance = await relevanceResponse.data;
 //console.log(fetchedRelevance);
 
-const likelihoodResponse = await fetch(`${BASE_URL}/likelihood`);
-export const fetchedLikelihood = await likelihoodResponse.json();
+const likelihoodResponse = await axios.get(`/likelihood`);
+export const fetchedLikelihood = await likelihoodResponse.data;
 //console.log(fetchedLikelihood);
 
-const pestleResponse = await fetch(`${BASE_URL}/pestle`);
-export const fetchedPestle = await pestleResponse.json();
+const pestleResponse = await axios.get(`/pestle`);
+export const fetchedPestle = await pestleResponse.data;
 //console.log(fetchedPestle);
