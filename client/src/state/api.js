@@ -1,5 +1,5 @@
 import axios from "axios";
-axios.defaults.baseURL= import.meta.env.VITE_API_BASE_URL;
+axios.defaults.baseURL= "https://dashboard-r3ks.onrender.com"
 const countryResponse = await axios.get(`/country`);
 export const fetchedCountries = await countryResponse.data;
 // console.log(fetchedCountries);
