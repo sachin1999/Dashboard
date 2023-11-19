@@ -1,9 +1,8 @@
 import axios from "axios";
 axios.defaults.baseURL= import.meta.env.VITE_API_BASE_URL;
-
 const countryResponse = await axios.get(`/country`);
 export const fetchedCountries = await countryResponse.data;
-console.log(fetchedCountries);
+// console.log(fetchedCountries);
 
 const sectorResponse = await axios.get(`/sectors`);
 export const fetchedSectors = await sectorResponse.data;

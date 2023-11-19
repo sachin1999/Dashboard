@@ -3,12 +3,12 @@ import { getCountry, getData, getSector, getTopic, getIntensity, getRelevance, g
 
 const router = express.Router();
 
-router.get("/data", getData);
-router.get("/country", getCountry);
-router.get("/sectors", getSector);
-router.get("/topics", getTopic);
-router.get("/intensity", getIntensity);
-router.get("/relevance", getRelevance);
-router.get("/likelihood", getLikelihood);
-router.get("/pestle", getPestle);
+router.get("/api/data", getData);
+router.get("/api/country", getCountry);
+router.get("/api/sectors", getSector);
+router.get("/api/topics", getTopic);
+router.get("/api/intensity", getIntensity);
+router.get("/api/relevance", getRelevance);
+router.get("/api/likelihood", getLikelihood);
+router.get("/api/pestle", getPestle);
 export default router;
